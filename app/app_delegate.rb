@@ -4,11 +4,13 @@ class AppDelegate
     @window.backgroundColor = UIColor.blueColor
     @window.makeKeyAndVisible
     @window.rootViewController = HelloViewController.alloc.init
+    #doit
     true
   end
   def doit
     c= CLLocation.alloc.initWithLatitude(43, longitude: -76.0)
     p c.description
+    NSLog("c.coordinate: #{c.coordinate}")
     p c.coordinate  
   end
 end
